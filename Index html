@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elimu Digital Services</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#222}
+header{background:#102a43;color:white;padding:25px 15px;text-align:center}
+header h1{margin:0}
+nav{background:#1769aa;padding:14px;text-align:center}
+nav a{color:white;text-decoration:none;margin:10px;font-weight:bold}
+.hero{text-align:center;padding:55px 20px;background:#dceeff}
+.hero h2{font-size:30px;color:#123}
+button{background:#087bce;color:white;border:0;padding:13px 22px;border-radius:6px}
+.services{padding:25px 15px;text-align:center}
+.service{background:white;padding:22px;margin:15px auto;max-width:400px;border-radius:10px;box-shadow:0 2px 8px #ccc}
+.service h3{color:#087bce}
+.contact{background:#102a43;color:white;text-align:center;padding:30px 15px}
+footer{text-align:center;padding:15px}
+</style>
+</head>
+<body>
+
+<header>
+<h1>ELIMU DIGITAL SERVICES</h1>
+<p>Your Digital Solutions Partner</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+<h2>Welcome to Elimu Digital Services</h2>
+<p>Affordable digital services for students, individuals and businesses.</p>
+<a href="#services"><button>Explore Services</button></a>
+</section>
+
+<section class="services" id="services">
+<h2>Our Services</h2>
+
+<div class="service">
+<h3>💻 Website Creation</h3>
+<p>Simple and professional websites for businesses and individuals.</p>
+</div>
+
+<div class="service">
+<h3>🎨 Graphic Design</h3>
+<p>Posters, flyers, invitations and social media designs.</p>
+</div>
+
+<div class="service">
+<h3>📝 Typing & Documents</h3>
+<p>Typing, formatting and preparing professional documents.</p>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<h2>Contact Us</h2>
+<p>Interested in our services? Get in touch!</p>
+<p>WhatsApp: YOUR PHONE NUMBER</p>
+</section>
+
+<footer>
+<p>© 2026 Elimu Digital Services</p>
+</footer>
+
+</body>
+</html>
+￼Enter
