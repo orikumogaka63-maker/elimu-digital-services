@@ -1,4 +1,3 @@
-# elimu-digital-services
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +15,7 @@ nav{display:flex;gap:16px;flex-wrap:wrap}
 nav a{color:white;text-decoration:none;font-size:14px}
 .hero{background:linear-gradient(130deg,#102b50,#087e9c);color:white;text-align:center;padding:85px 20px}
 .hero h1{font-size:clamp(30px,6vw,48px);margin-bottom:15px}
-.hero p{max-width:650px;margin:auto auto 25px}
+.hero p{max-width:650px;margin:0 auto 25px}
 .btn{display:inline-block;background:#ffbd35;color:#172033;padding:13px 22px;border-radius:7px;text-decoration:none;font-weight:bold}
 section{padding:60px 7%}
 .heading{text-align:center;margin-bottom:35px}
@@ -27,11 +26,11 @@ section{padding:60px 7%}
 .symbol{font-size:35px}
 .card p{color:#596579}
 .about{background:#e8f2f8}
-.price{color:#087e9c;font-weight:bold;margin-top:12px}
+.price{color:#087e9c!important;font-weight:bold;margin-top:12px}
 .steps{max-width:700px;margin:auto}
 .steps p{padding:12px 0}
 .contact{background:#102b50;color:white;text-align:center}
-.contact h2{color:white}
+.contact .heading h2{color:white}
 .contact p{margin:12px auto 22px;max-width:600px}
 .contact a{margin:7px}
 footer{text-align:center;background:#091b31;color:white;padding:22px;font-size:14px}
@@ -71,31 +70,29 @@ section{padding:45px 6%}
 <div class="card">
 <div class="symbol">🎨</div>
 <h3>Graphic Design</h3>
-<p>We create attractive posters, flyers, invitations and promotional designs for your events and business.</p>
+<p>Attractive posters, flyers, invitations and promotional designs for your events and business.</p>
 <p class="price">Request a quotation</p>
 </div>
 <div class="card">
 <div class="symbol">💻</div>
 <h3>Website Creation</h3>
-<p>We create simple, modern and mobile-friendly websites for small businesses and individuals.</p>
+<p>Modern, mobile-friendly websites for small businesses and individuals.</p>
 <p class="price">Request a quotation</p>
 </div>
 <div class="card">
 <div class="symbol">📝</div>
 <h3>Typing Services</h3>
-<p>Get help with typing, document formatting, letters and other general document preparation.</p>
+<p>Typing, document formatting, letters and general document preparation.</p>
 <p class="price">Request a quotation</p>
 </div>
 </div>
 </section>
 
 <section class="about" id="about">
-<div class="heading">
-<h2>About Us</h2>
-</div>
+<div class="heading"><h2>About Us</h2></div>
 <div class="steps">
-<p>Elimu Digital Services is a growing digital service initiative focused on helping people access useful and affordable digital solutions.</p>
-<p>Our goal is to make digital services simple, accessible and reliable for individuals and small businesses.</p>
+<p>Elimu Digital Services is a growing digital service initiative focused on useful and affordable digital solutions.</p>
+<p>Our goal is to make digital services simple, accessible and reliable.</p>
 <p><strong>Our values:</strong> Creativity, reliability, affordability and good customer service.</p>
 </div>
 </section>
@@ -108,18 +105,21 @@ section{padding:45px 6%}
 <div class="steps">
 <p>📌 <strong>1. Choose:</strong> Select the service you need.</p>
 <p>💬 <strong>2. Contact:</strong> Tell us what you want.</p>
-<p>📋 <strong>3. Agree:</strong> Confirm the price, requirements and delivery time.</p>
+<p>📋 <strong>3. Agree:</strong> Confirm the price and delivery time.</p>
 <p>✅ <strong>4. Receive:</strong> Review and receive your completed work.</p>
 </div>
 </section>
 
 <section class="contact" id="contact">
-<div class="heading">
-<h2>Let's Work Together!</h2>
-</div>
+<div class="heading"><h2>Let's Work Together!</h2></div>
 <p>Have a project or need a digital service? Contact us to discuss your requirements and get a quotation.</p>
-<a class="btn" href="#" id="whatsapp">Contact Us on WhatsApp</a>
-<p>We look forward to working with you!</p>
+
+<a class="btn" href="https://wa.me/254728462920?text=Hello%20Elimu%20Digital%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener">
+Contact Us on WhatsApp
+</a>
+
+<p>WhatsApp: 0728462920</p>
+<p>Alternative contact: 0726507024</p>
 </section>
 </main>
 
@@ -128,29 +128,6 @@ section{padding:45px 6%}
 <p>Creative solutions. Digital opportunities.</p>
 </footer>
 
-<script>
-// Replace this with your WhatsApp number,
-// including Kenya's country code 254.
-const WHATSAPP_NUMBER = "YOUR_WHATSAPP_NUMBER";
-
-document.getElementById("whatsapp").addEventListener("click", function(e){
-e.preventDefault();
-
-if(WHATSAPP_NUMBER === "YOUR_WHATSAPP_NUMBER"){
-alert("Please add your WhatsApp number in the website code first.");
-return;
-}
-
-const message = encodeURIComponent(
-"Hello Elimu Digital Services! I would like to inquire about your services."
-);
-
-window.open(
-"https://wa.me/" + WHATSAPP_NUMBER + "?text=" + message,
-"_blank"
-);
-});
-</script>
-
 </body>
 </html>
+
