@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ELIMU DIGITAL SERVICES offers graphic design, simple websites and typing services. Contact us for a quote.">
+  <meta name="theme-color" content="#101b35">
+  <title>ELIMU DIGITAL SERVICES | Digital help made simple</title>
+  <style>
+    :root {
+      --navy: #101b35;
+      --blue: #315efb;
+      --cyan: #28c7c2;
+      --ink: #172033;
+      --muted: #647089;
+      --paper: #f5f7fc;
+      --white: #fff;
+      --line: #e5e9f2;
+      --radius: 20px;
+      --shadow: 0 16px 45px rgba(16, 27, 53, .09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink); background: var(--paper);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1100px, 92%); margin: auto; }
+    header {
+      position: sticky; top: 0; z-index: 10; background: rgba(16,27,53,.97);
+      color: white; box-shadow: 0 4px 20px rgba(0,0,0,.12);
+    }
+    .nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .brand { font-weight: 850; letter-spacing: .3px; text-decoration: none; }
+    .brand span { color: var(--cyan); }
+    nav { display: flex; flex-wrap: wrap; gap: 18px; }
+    nav a { color: #e8edff; text-decoration: none; font-size: .93rem; }
+    nav a:hover { color: var(--cyan); }
+    .hero {
+      color: white; padding: 86px 0 78px;
+      background: radial-gradient(circle at 85% 20%, rgba(40,199,194,.28), transparent 28%),
+                  linear-gradient(130deg, #101b35, #1c3470 70%, #315efb);
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.35fr .8fr; gap: 35px; align-items: center; }
+    .eyebrow { color: #8ff1e9; font-weight: 750; letter-spacing: 1.6px; text-transform: uppercase; font-size: .78rem; }
+    h1 { font-size: clamp(2.4rem, 6vw, 4.5rem); line-height: 1.05; margin: 14px 0 20px; letter-spacing: -1.8px; }
+    .hero p { color: #e0e8ff; max-width: 620px; font-size: 1.08rem; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+    .btn { display: inline-block; border: 0; border-radius: 999px; padding: 12px 20px; font-weight: 750; text-decoration: none; cursor: pointer; }
+    .btn-primary { background: var(--cyan); color: #082b36; }
+    .btn-light { border: 1px solid rgba(255,255,255,.45); color: white; }
+    .hero-card {
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
+      padding: 27px; border-radius: 26px; backdrop-filter: blur(8px);
+    }
+    .hero-card .big { font-size: 3.2rem; }
+    .hero-card h2 { margin: 4px 0 8px; }
+    .hero-card p { font-size: .95rem; margin-bottom: 0; }
+    section { padding: 72px 0; }
+    .section-head { max-width: 680px; margin-bottom: 30px; }
+    .kicker { color: var(--blue); font-size: .78rem; font-weight: 850; letter-spacing: 1.4px; text-transform: uppercase; }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.15; margin: 8px 0 12px; letter-spacing: -.7px; }
+    .section-head p, .muted { color: var(--muted); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { background: white; padding: 25px; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .icon { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 16px; background: #edf1ff; font-size: 1.6rem; }
+    .card h3 { margin: 16px 0 8px; }
+    .card p { color: var(--muted); margin: 0 0 14px; }
+    .card ul { padding-left: 19px; margin: 0; color: #46516a; }
+    .soft { background: #edf2ff; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .step { background: white; border-radius: var(--radius); padding: 23px; border: 1px solid var(--line); }
+    .number { color: var(--blue); font-size: 1.7rem; font-weight: 900; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+    .promise { background: var(--navy); color: white; border-radius: var(--radius); padding: 27px; }
+    .promise p { color: #dbe4ff; }
+    .contact-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 22px; align-items: start; }
+    .contact-panel { background: var(--navy); color: white; padding: 27px; border-radius: var(--radius); }
+    .contact-panel p { color: #dbe4ff; }
+    form { background: white; padding: 26px; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+    label { display: block; font-weight: 700; margin: 13px 0 6px; }
+    input, select, textarea {
+      width: 100%; padding: 12px 13px; border: 1px solid #cfd6e5; border-radius: 11px;
+      font: inherit; color: var(--ink); background: white;
+    }
+    textarea { min-height: 115px; resize: vertical; }
+    input:focus, select:focus, textarea:focus { outline: 3px solid rgba(49,94,251,.15); border-color: var(--blue); }
+    .form-note { color: var(--muted); font-size: .85rem; }
+    .faq { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    details { background: white; border: 1px solid var(--line); padding: 18px; border-radius: 14px; }
+    summary { cursor: pointer; font-weight: 750; }
+    details p { color: var(--muted); margin-bottom: 0; }
+    footer { background: #0b1429; color: #dbe4ff; padding: 30px 0; }
+    .footer-row { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
+    footer p { margin: 4px 0; font-size: .9rem; }
+    .notice { background: #fff8e7; border: 1px solid #f1d99c; color: #674d16; padding: 14px 16px; border-radius: 13px; font-size: .9rem; }
+    @media (max-width: 760px) {
+      .nav { align-items: flex-start; flex-direction: column; padding: 13px 0; }
+      nav { gap: 12px; }
+      .hero { padding: 62px 0; }
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .cards, .steps { grid-template-columns: 1fr; }
+      section { padding: 55px 0; }
+      .faq { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home">ELIMU <span>DIGITAL SERVICES</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#how">How it works</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Simple • Helpful • Digital</div>
+          <h1>Digital help for your next big idea.</h1>
+          <p>Need a poster, a simple website, or a neatly typed document? ELIMU DIGITAL SERVICES can help you get started with clear communication and work shaped around your needs.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#contact">Request a quote</a>
+            <a class="btn btn-light" href="#services">Explore services</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="big" aria-hidden="true">✦</div>
+          <h2>Make your ideas clear.</h2>
+          <p>Practical digital services for students, community groups and small businesses. Ask about your project before placing an order.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">What we do</div>
+          <h2>Services to help you move forward</h2>
+          <p>Choose a service below, then send a short description of what you need. We will discuss the scope, price and delivery time before work begins.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="icon" aria-hidden="true">🎨</div>
+            <h3>Graphic design</h3>
+            <p>Simple, clear designs that help your message stand out.</p>
+            <ul>
+              <li>Posters and flyers</li>
+              <li>Event invitations</li>
+              <li>Social media adverts</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">💻</div>
+            <h3>Website creation</h3>
+            <p>Starter websites that introduce a person, project or small business.</p>
+            <ul>
+              <li>One-page websites</li>
+              <li>Business information pages</li>
+              <li>Mobile-friendly layouts</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">📝</div>
+            <h3>Typing services</h3>
+            <p>Neat, readable documents with consistent formatting.</p>
+            <ul>
+              <li>Typing handwritten notes</li>
+              <li>Document formatting</li>
+              <li>Basic proofreading</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">A simple process</div>
+          <h2>How it works</h2>
+          <p>There are no surprise charges. Agree on the details before a project starts.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><div class="number">01</div><h3>Tell us your idea</h3><p class="muted">Choose a service and explain what you need, including any deadline or examples.</p></div>
+          <div class="step"><div class="number">02</div><h3>Agree on the quote</h3><p class="muted">We discuss the work, price, delivery date and any changes before starting.</p></div>
+          <div class="step"><div class="number">03</div><h3>Review the work</h3><p class="muted">You review the draft and share any agreed corrections before final delivery.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about-grid">
+        <div>
+          <div class="kicker">About us</div>
+          <h2>Small projects deserve care.</h2>
+          <p class="muted">ELIMU DIGITAL SERVICES is a growing digital-services project focused on making everyday digital tasks easier. We aim to communicate clearly, agree on expectations and deliver work carefully.</p>
+          <p class="muted">Every project is discussed individually. Availability, features and delivery time depend on the request.</p>
+        </div>
+        <aside class="promise">
+          <h3>Our service promise</h3>
+          <p>Clear communication. Agreed prices. Honest timelines. A chance to review the work.</p>
+          <p>We do not claim to be an agency or promise results we cannot guarantee.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="soft" id="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Get in touch</div>
+          <h2>Tell us what you need</h2>
+          <p>Complete the form to prepare a message. The contact button will open WhatsApp after the business contact number has been set up.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-panel">
+            <h3>Request a quote</h3>
+            <p>Include the type of service, what you want included and when you need it. We will confirm whether the project is possible before agreeing to anything.</p>
+            <p><strong>Service area:</strong> Online (subject to availability)</p>
+            <p><strong>Prices:</strong> Quoted after understanding the project.</p>
+          </div>
+          <form id="quoteForm">
+            <label for="customerName">Your first name</label>
+            <input id="customerName" name="customerName" maxlength="50" required placeholder="First name">
+            <label for="service">Service needed</label>
+            <select id="service" name="service" required>
+              <option value="">Choose a service</option>
+              <option>Graphic design</option>
+              <option>Website creation</option>
+              <option>Typing and formatting</option>
+              <option>Not sure yet</option>
+            </select>
+            <label for="details">Describe your project</label>
+            <textarea id="details" name="details" maxlength="1000" required placeholder="What do you need? Include useful details, but do not share passwords or private information."></textarea>
+            <label for="deadline">When do you need it? (optional)</label>
+            <input id="deadline" name="deadline" maxlength="60" placeholder="e.g. Next Friday">
+            <button class="btn btn-primary" type="submit" style="margin-top:18px">Prepare WhatsApp message</button>
+            <p class="form-note">Do not include passwords, payment PINs, home addresses or other sensitive information.</p>
+            <p id="formMessage" class="form-note" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Questions</div>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq">
+          <details><summary>How much do services cost?</summary><p>Prices depend on the work involved. You will receive a quote and agree to it before work starts.</p></details>
+          <details><summary>How long will my project take?</summary><p>Timing depends on the project and current availability. A delivery date will be agreed before starting.</p></details>
+          <details><summary>Can I request changes?</summary><p>Yes. The number and type of revisions should be agreed when the project is quoted.</p></details>
+          <details><summary>Do you work with every request?</summary><p>Not necessarily. Each request is reviewed first to confirm that it is suitable and can be completed responsibly.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <div><strong>ELIMU DIGITAL SERVICES</strong><p>Digital help made simple.</p></div>
+      <p>© <span id="year"></span> ELIMU DIGITAL SERVICES. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // IMPORTANT: Replace this example with a business contact number approved by a parent/guardian.
+    // Use country code 254 for Kenya, without +, spaces or leading 0. Example format: 2547XXXXXXXX
+    const BUSINESS_WHATSAPP_NUMBER = "254700000000";
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.getElementById("quoteForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById("customerName").value.trim();
+      const service = document.getElementById("service").value;
+      const details = document.getElementById("details").value.trim();
+      const deadline = document.getElementById("deadline").value.trim();
+      const status = document.getElementById("formMessage");
+
+      if (!name || !service || !details) {
+        status.textContent = "Please complete your name, service and project description.";
+        return;
+      }
+
+      if (BUSINESS_WHATSAPP_NUMBER === "254700000000") {
+        status.textContent = "The website is ready. Before receiving messages, the site owner must replace the example WhatsApp number in the code with an approved business contact number.";
+        return;
+      }
+
+      const message =
+        "Hello ELIMU DIGITAL SERVICES. I would like to request a quote." +
+        "\nName: " + name +
+        "\nService: " + service +
+        "\nProject: " + details +
+        (deadline ? "\nNeeded by: " + deadline : "");
+
+      const url = "https://wa.me/" + BUSINESS_WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+      window.open(url, "_blank", "noopener,noreferrer");
+      status.textContent = "Your message is ready to send in WhatsApp.";
+    });
+  </script>
+</body>
+</html>
