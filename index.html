@@ -3,313 +3,190 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ELIMU DIGITAL SERVICES offers graphic design, simple websites and typing services. Contact us for a quote.">
-  <meta name="theme-color" content="#101b35">
-  <title>ELIMU DIGITAL SERVICES | Digital help made simple</title>
+  <meta name="description" content="Elimu Digital Services — graphic design, website creation and typing services.">
+  <meta name="theme-color" content="#101a35">
+  <title>Elimu Digital Services | Creative digital help</title>
   <style>
-    :root {
-      --navy: #101b35;
-      --blue: #315efb;
-      --cyan: #28c7c2;
-      --ink: #172033;
-      --muted: #647089;
-      --paper: #f5f7fc;
-      --white: #fff;
-      --line: #e5e9f2;
-      --radius: 20px;
-      --shadow: 0 16px 45px rgba(16, 27, 53, .09);
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0; color: var(--ink); background: var(--paper);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.6;
-    }
-    a { color: inherit; }
-    .wrap { width: min(1100px, 92%); margin: auto; }
-    header {
-      position: sticky; top: 0; z-index: 10; background: rgba(16,27,53,.97);
-      color: white; box-shadow: 0 4px 20px rgba(0,0,0,.12);
-    }
-    .nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
-    .brand { font-weight: 850; letter-spacing: .3px; text-decoration: none; }
-    .brand span { color: var(--cyan); }
-    nav { display: flex; flex-wrap: wrap; gap: 18px; }
-    nav a { color: #e8edff; text-decoration: none; font-size: .93rem; }
-    nav a:hover { color: var(--cyan); }
-    .hero {
-      color: white; padding: 86px 0 78px;
-      background: radial-gradient(circle at 85% 20%, rgba(40,199,194,.28), transparent 28%),
-                  linear-gradient(130deg, #101b35, #1c3470 70%, #315efb);
-    }
-    .hero-grid { display: grid; grid-template-columns: 1.35fr .8fr; gap: 35px; align-items: center; }
-    .eyebrow { color: #8ff1e9; font-weight: 750; letter-spacing: 1.6px; text-transform: uppercase; font-size: .78rem; }
-    h1 { font-size: clamp(2.4rem, 6vw, 4.5rem); line-height: 1.05; margin: 14px 0 20px; letter-spacing: -1.8px; }
-    .hero p { color: #e0e8ff; max-width: 620px; font-size: 1.08rem; }
-    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
-    .btn { display: inline-block; border: 0; border-radius: 999px; padding: 12px 20px; font-weight: 750; text-decoration: none; cursor: pointer; }
-    .btn-primary { background: var(--cyan); color: #082b36; }
-    .btn-light { border: 1px solid rgba(255,255,255,.45); color: white; }
-    .hero-card {
-      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
-      padding: 27px; border-radius: 26px; backdrop-filter: blur(8px);
-    }
-    .hero-card .big { font-size: 3.2rem; }
-    .hero-card h2 { margin: 4px 0 8px; }
-    .hero-card p { font-size: .95rem; margin-bottom: 0; }
-    section { padding: 72px 0; }
-    .section-head { max-width: 680px; margin-bottom: 30px; }
-    .kicker { color: var(--blue); font-size: .78rem; font-weight: 850; letter-spacing: 1.4px; text-transform: uppercase; }
-    h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.15; margin: 8px 0 12px; letter-spacing: -.7px; }
-    .section-head p, .muted { color: var(--muted); }
-    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .card { background: white; padding: 25px; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
-    .icon { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 16px; background: #edf1ff; font-size: 1.6rem; }
-    .card h3 { margin: 16px 0 8px; }
-    .card p { color: var(--muted); margin: 0 0 14px; }
-    .card ul { padding-left: 19px; margin: 0; color: #46516a; }
-    .soft { background: #edf2ff; }
-    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .step { background: white; border-radius: var(--radius); padding: 23px; border: 1px solid var(--line); }
-    .number { color: var(--blue); font-size: 1.7rem; font-weight: 900; }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
-    .promise { background: var(--navy); color: white; border-radius: var(--radius); padding: 27px; }
-    .promise p { color: #dbe4ff; }
-    .contact-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 22px; align-items: start; }
-    .contact-panel { background: var(--navy); color: white; padding: 27px; border-radius: var(--radius); }
-    .contact-panel p { color: #dbe4ff; }
-    form { background: white; padding: 26px; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
-    label { display: block; font-weight: 700; margin: 13px 0 6px; }
-    input, select, textarea {
-      width: 100%; padding: 12px 13px; border: 1px solid #cfd6e5; border-radius: 11px;
-      font: inherit; color: var(--ink); background: white;
-    }
-    textarea { min-height: 115px; resize: vertical; }
-    input:focus, select:focus, textarea:focus { outline: 3px solid rgba(49,94,251,.15); border-color: var(--blue); }
-    .form-note { color: var(--muted); font-size: .85rem; }
-    .faq { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-    details { background: white; border: 1px solid var(--line); padding: 18px; border-radius: 14px; }
-    summary { cursor: pointer; font-weight: 750; }
-    details p { color: var(--muted); margin-bottom: 0; }
-    footer { background: #0b1429; color: #dbe4ff; padding: 30px 0; }
-    .footer-row { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
-    footer p { margin: 4px 0; font-size: .9rem; }
-    .notice { background: #fff8e7; border: 1px solid #f1d99c; color: #674d16; padding: 14px 16px; border-radius: 13px; font-size: .9rem; }
-    @media (max-width: 760px) {
-      .nav { align-items: flex-start; flex-direction: column; padding: 13px 0; }
-      nav { gap: 12px; }
-      .hero { padding: 62px 0; }
-      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
-      .cards, .steps { grid-template-columns: 1fr; }
-      section { padding: 55px 0; }
-      .faq { grid-template-columns: 1fr; }
-    }
+    :root{--navy:#101a35;--blue:#315efb;--cyan:#20c7c9;--gold:#ffc857;--ink:#17213b;--muted:#65708a;--paper:#f5f7ff;--white:#fff;--line:#e5e9f4;--shadow:0 18px 50px rgba(18,32,72,.12)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{background:rgba(16,26,53,.97);color:white;position:sticky;top:0;z-index:10;box-shadow:0 5px 22px #08122b30}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-size:1.12rem;font-weight:900;letter-spacing:.3px}.brand span{color:var(--cyan)}
+    nav{display:flex;align-items:center;gap:22px;font-size:.94rem}nav a{color:#e9edff}nav a:hover{color:var(--gold)}
+    .menu{display:none;background:transparent;border:1px solid #ffffff55;color:white;border-radius:9px;padding:8px 12px;font-size:1.2rem}
+    .hero{background:radial-gradient(circle at 85% 20%,#315efb88,transparent 28%),linear-gradient(130deg,#101a35,#1c3470 65%,#087e91);color:white;padding:82px 0 76px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}.eyebrow{color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:.78rem}
+    h1{font-size:clamp(2.5rem,6vw,4.7rem);line-height:1.04;margin:15px 0 20px;letter-spacing:-2px}.hero p{color:#e0e8ff;font-size:1.1rem;max-width:620px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:12px;font-weight:800;border:0;cursor:pointer;transition:.2s}
+    .btn:hover{transform:translateY(-3px)}.primary{background:var(--gold);color:#19213b}.outline{border:1px solid #ffffff80;color:white}.darkbtn{background:var(--navy);color:white}.whatsapp{background:#18b968;color:white}
+    .hero-art{min-height:290px;display:grid;place-items:center}.orbit{width:min(310px,75vw);aspect-ratio:1;border:1px solid #ffffff55;border-radius:50%;display:grid;place-items:center;position:relative;background:#ffffff0d}
+    .orbit:before,.orbit:after{content:"";position:absolute;border:1px dashed #ffffff55;border-radius:50%;inset:28px}.orbit:after{inset:60px}
+    .logo-mark{width:145px;height:145px;border-radius:35px;background:linear-gradient(145deg,var(--cyan),var(--blue));display:grid;place-items:center;font-size:3.4rem;font-weight:900;box-shadow:0 20px 55px #07122e88;transform:rotate(-7deg)}
+    .float{position:absolute;background:white;color:var(--navy);padding:10px 14px;border-radius:12px;font-weight:800;box-shadow:var(--shadow)}.f1{top:22px;right:0}.f2{bottom:28px;left:-5px}.f3{bottom:2px;right:12px}
+    section{padding:72px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 38px}.section-head .eyebrow{color:var(--blue)}h2{font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.15;margin:8px 0 12px}.section-head p,.muted{color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border:1px solid var(--line);border-radius:20px;padding:25px;box-shadow:0 8px 28px #17213b0b;transition:.22s}.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+    .icon{width:58px;height:58px;border-radius:16px;background:#eaf0ff;display:grid;place-items:center;font-size:1.8rem;margin-bottom:16px}.card h3{margin:5px 0 8px;font-size:1.25rem}.card p{color:var(--muted);margin:0 0 14px}.card ul{padding-left:19px;color:#48536e;margin:0 0 20px}
+    .samples{background:#edf1ff}.sample-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.sample{border-radius:18px;overflow:hidden;background:white;box-shadow:0 8px 24px #17213b10}.sample-art{height:180px;display:grid;place-items:center;text-align:center;padding:18px;color:white;font-weight:900;font-size:1.4rem;position:relative;overflow:hidden}
+    .sample-art small{display:block;font-size:.72rem;letter-spacing:2px;margin-top:8px}.art1{background:linear-gradient(135deg,#ff6b6b,#7b2ff7)}.art2{background:linear-gradient(135deg,#087e91,#20c7c9)}.art3{background:linear-gradient(135deg,#101a35,#315efb)}
+    .art4{background:linear-gradient(135deg,#ff9a3c,#f44376)}.art5{background:linear-gradient(135deg,#164e63,#0f766e)}.art6{background:linear-gradient(135deg,#673ab7,#3f51b5)}
+    .sample-info{padding:16px}.sample-info strong{display:block}.sample-info span{font-size:.9rem;color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.about-panel{background:var(--navy);color:white;border-radius:24px;padding:32px}.about-panel p{color:#d5defb}.ticks{list-style:none;padding:0}.ticks li{margin:12px 0}.ticks li:before{content:"✓";color:var(--cyan);font-weight:900;margin-right:10px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{background:white;border-radius:17px;padding:22px;border:1px solid var(--line)}.num{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:white;font-weight:900}
+    .contact{background:linear-gradient(135deg,#101a35,#1e3b7d);color:white}.contact .section-head p{color:#d5defb}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:25px}.contact-box{background:#ffffff10;border:1px solid #ffffff25;border-radius:20px;padding:25px}.contact-box p{color:#e0e8ff}.phone{display:block;padding:13px 14px;border-radius:12px;background:#ffffff12;margin:10px 0;font-weight:800}
+    form{display:grid;gap:12px}input,select,textarea{width:100%;padding:13px 14px;border-radius:10px;border:1px solid #d9dfef;font:inherit;background:white;color:var(--ink)}textarea{min-height:110px;resize:vertical}label{font-size:.9rem;font-weight:700;color:#e8edff}
+    .notice{font-size:.82rem;color:#d5defb;margin-top:10px}footer{background:#0a1126;color:#c8d1ec;padding:25px 0;text-align:center;font-size:.9rem}.footer-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:10px}
+    .top{position:fixed;right:17px;bottom:17px;width:44px;height:44px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-size:1.3rem;font-weight:900;box-shadow:var(--shadow)}
+    @media(max-width:800px){.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{padding:60px 0}.hero-art{min-height:260px}.cards,.sample-grid,.steps{grid-template-columns:1fr 1fr}nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy);padding:18px 4%;flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu{display:block}}
+    @media(max-width:540px){.cards,.sample-grid,.steps{grid-template-columns:1fr}section{padding:55px 0}.nav{min-height:66px}.hero h1{letter-spacing:-1px}.orbit{width:245px}.logo-mark{width:115px;height:115px;font-size:2.7rem}}
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="#home">ELIMU <span>DIGITAL SERVICES</span></a>
-      <nav aria-label="Main navigation">
-        <a href="#services">Services</a>
-        <a href="#how">How it works</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">ELIMU <span>DIGITAL SERVICES</span></a>
+    <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav id="navLinks">
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#samples">Samples</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Creative ideas • Digital solutions</div>
+        <h1>Make your ideas<br>look amazing.</h1>
+        <p>Welcome to Elimu Digital Services. We help individuals, students and small businesses with attractive designs, simple websites and neat document typing.</p>
+        <div class="actions">
+          <a class="btn primary" href="#services">Explore our services</a>
+          <a class="btn outline" href="#contact">Contact us</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Elimu Digital Services creative logo">
+        <div class="orbit"><div class="logo-mark">E</div><div class="float f1">✨ Creative</div><div class="float f2">💻 Digital</div><div class="float f3">✍️ Reliable</div></div>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow">Simple • Helpful • Digital</div>
-          <h1>Digital help for your next big idea.</h1>
-          <p>Need a poster, a simple website, or a neatly typed document? ELIMU DIGITAL SERVICES can help you get started with clear communication and work shaped around your needs.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="#contact">Request a quote</a>
-            <a class="btn btn-light" href="#services">Explore services</a>
-          </div>
-        </div>
-        <div class="hero-card">
-          <div class="big" aria-hidden="true">✦</div>
-          <h2>Make your ideas clear.</h2>
-          <p>Practical digital services for students, community groups and small businesses. Ask about your project before placing an order.</p>
-        </div>
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">What we do</div><h2>Our digital services</h2><p>Choose a service and contact us with what you need. We will discuss the details and agree on the work before starting.</p></div>
+      <div class="cards">
+        <article class="card">
+          <div class="icon">🎨</div><h3>Graphic Design</h3>
+          <p>Clear, colourful designs that help your message stand out.</p>
+          <ul><li>Posters and flyers</li><li>Invitations and announcements</li><li>Simple promotional designs</li></ul>
+          <a class="btn darkbtn" href="#contact" data-service="Graphic Design">Request this service</a>
+        </article>
+        <article class="card">
+          <div class="icon">🌐</div><h3>Website Creation</h3>
+          <p>Simple, mobile-friendly websites for small businesses, groups and personal projects.</p>
+          <ul><li>Business and portfolio websites</li><li>Mobile-friendly layouts</li><li>Basic pages and contact links</li></ul>
+          <a class="btn darkbtn" href="#contact" data-service="Website Creation">Request this service</a>
+        </article>
+        <article class="card">
+          <div class="icon">⌨️</div><h3>Typing Services</h3>
+          <p>Neatly typed and arranged documents that are easy to read.</p>
+          <ul><li>Typing handwritten notes</li><li>Document formatting</li><li>Letters and simple reports</li></ul>
+          <a class="btn darkbtn" href="#contact" data-service="Typing Services">Request this service</a>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="services">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="kicker">What we do</div>
-          <h2>Services to help you move forward</h2>
-          <p>Choose a service below, then send a short description of what you need. We will discuss the scope, price and delivery time before work begins.</p>
-        </div>
-        <div class="cards">
-          <article class="card">
-            <div class="icon" aria-hidden="true">🎨</div>
-            <h3>Graphic design</h3>
-            <p>Simple, clear designs that help your message stand out.</p>
-            <ul>
-              <li>Posters and flyers</li>
-              <li>Event invitations</li>
-              <li>Social media adverts</li>
-            </ul>
-          </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">💻</div>
-            <h3>Website creation</h3>
-            <p>Starter websites that introduce a person, project or small business.</p>
-            <ul>
-              <li>One-page websites</li>
-              <li>Business information pages</li>
-              <li>Mobile-friendly layouts</li>
-            </ul>
-          </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">📝</div>
-            <h3>Typing services</h3>
-            <p>Neat, readable documents with consistent formatting.</p>
-            <ul>
-              <li>Typing handwritten notes</li>
-              <li>Document formatting</li>
-              <li>Basic proofreading</li>
-            </ul>
-          </article>
-        </div>
+  <section class="samples" id="samples">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">A little inspiration</div><h2>Creative sample gallery</h2><p>These are example concepts showing the kinds of work we can create. They are sample designs, not client projects.</p></div>
+      <div class="sample-grid">
+        <article class="sample"><div class="sample-art art1">GRAND OPENING<small>YOUR BUSINESS • YOUR MOMENT</small></div><div class="sample-info"><strong>Business opening poster</strong><span>Graphic design sample</span></div></article>
+        <article class="sample"><div class="sample-art art2">YOU'RE INVITED<small>CELEBRATE SOMETHING SPECIAL</small></div><div class="sample-info"><strong>Event invitation</strong><span>Graphic design sample</span></div></article>
+        <article class="sample"><div class="sample-art art3">GROW YOUR<br>BUSINESS ONLINE<small>A SIMPLE WEBSITE</small></div><div class="sample-info"><strong>Small business website</strong><span>Website creation sample</span></div></article>
+        <article class="sample"><div class="sample-art art4">SALE! SALE!<small>GREAT OFFERS • SHOP TODAY</small></div><div class="sample-info"><strong>Promotional flyer</strong><span>Graphic design sample</span></div></article>
+        <article class="sample"><div class="sample-art art5">YOUR WORK.<br>NEATLY PRESENTED.<small>PROFESSIONAL DOCUMENTS</small></div><div class="sample-info"><strong>Formatted report</strong><span>Typing sample</span></div></article>
+        <article class="sample"><div class="sample-art art6">WELCOME<br>TO OUR SCHOOL<small>LEARN • CREATE • SUCCEED</small></div><div class="sample-info"><strong>School announcement</strong><span>Poster and document sample</span></div></article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="soft" id="how">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="kicker">A simple process</div>
-          <h2>How it works</h2>
-          <p>There are no surprise charges. Agree on the details before a project starts.</p>
-        </div>
-        <div class="steps">
-          <div class="step"><div class="number">01</div><h3>Tell us your idea</h3><p class="muted">Choose a service and explain what you need, including any deadline or examples.</p></div>
-          <div class="step"><div class="number">02</div><h3>Agree on the quote</h3><p class="muted">We discuss the work, price, delivery date and any changes before starting.</p></div>
-          <div class="step"><div class="number">03</div><h3>Review the work</h3><p class="muted">You review the draft and share any agreed corrections before final delivery.</p></div>
-        </div>
+  <section id="about">
+    <div class="wrap about-grid">
+      <div><div class="eyebrow">About us</div><h2>Simple service. Great attention to detail.</h2><p class="muted">Elimu Digital Services is a small digital-services project focused on helping people present their ideas clearly. Tell us what you need, the purpose, and your deadline so we can discuss a suitable solution.</p><p class="muted">We aim to keep communication clear, work carefully and make designs and documents that look good on phones and computers.</p></div>
+      <div class="about-panel"><h3>Why contact Elimu?</h3><ul class="ticks"><li>Friendly communication</li><li>Designs made for your purpose</li><li>Web pages that work on mobile screens</li><li>Neat document layout</li><li>Clear discussion before work begins</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">How it works</div><h2>Three easy steps</h2><p>Getting started is simple.</p></div>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><h3>Contact us</h3><p class="muted">Tell us which service you need and describe your idea.</p></div>
+        <div class="step"><div class="num">2</div><h3>Agree on details</h3><p class="muted">Discuss the requirements, timeline and price before work begins.</p></div>
+        <div class="step"><div class="num">3</div><h3>Receive your work</h3><p class="muted">Review the completed work and discuss any agreed changes.</p></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="about">
-      <div class="wrap about-grid">
-        <div>
-          <div class="kicker">About us</div>
-          <h2>Small projects deserve care.</h2>
-          <p class="muted">ELIMU DIGITAL SERVICES is a growing digital-services project focused on making everyday digital tasks easier. We aim to communicate clearly, agree on expectations and deliver work carefully.</p>
-          <p class="muted">Every project is discussed individually. Availability, features and delivery time depend on the request.</p>
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Let's talk</div><h2>What can we help you create?</h2><p>Send your request on WhatsApp using either contact number below.</p></div>
+      <div class="contact-grid">
+        <div class="contact-box">
+          <h3>Contact Elimu Digital Services</h3>
+          <p>Choose a number to open WhatsApp. If WhatsApp is not available, you can call or send a normal SMS.</p>
+          <a class="phone" href="https://wa.me/254728462920" target="_blank" rel="noopener">WhatsApp: 0728 462 920 ↗</a>
+          <a class="phone" href="https://wa.me/254726507024" target="_blank" rel="noopener">WhatsApp: 0726 507 024 ↗</a>
+          <p class="notice">Kenya country code is used in the WhatsApp links. Please confirm the numbers are active on WhatsApp.</p>
         </div>
-        <aside class="promise">
-          <h3>Our service promise</h3>
-          <p>Clear communication. Agreed prices. Honest timelines. A chance to review the work.</p>
-          <p>We do not claim to be an agency or promise results we cannot guarantee.</p>
-        </aside>
-      </div>
-    </section>
-
-    <section class="soft" id="contact">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="kicker">Get in touch</div>
-          <h2>Tell us what you need</h2>
-          <p>Complete the form to prepare a message. The contact button will open WhatsApp after the business contact number has been set up.</p>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-panel">
-            <h3>Request a quote</h3>
-            <p>Include the type of service, what you want included and when you need it. We will confirm whether the project is possible before agreeing to anything.</p>
-            <p><strong>Service area:</strong> Online (subject to availability)</p>
-            <p><strong>Prices:</strong> Quoted after understanding the project.</p>
-          </div>
-          <form id="quoteForm">
-            <label for="customerName">Your first name</label>
-            <input id="customerName" name="customerName" maxlength="50" required placeholder="First name">
-            <label for="service">Service needed</label>
-            <select id="service" name="service" required>
-              <option value="">Choose a service</option>
-              <option>Graphic design</option>
-              <option>Website creation</option>
-              <option>Typing and formatting</option>
-              <option>Not sure yet</option>
-            </select>
-            <label for="details">Describe your project</label>
-            <textarea id="details" name="details" maxlength="1000" required placeholder="What do you need? Include useful details, but do not share passwords or private information."></textarea>
-            <label for="deadline">When do you need it? (optional)</label>
-            <input id="deadline" name="deadline" maxlength="60" placeholder="e.g. Next Friday">
-            <button class="btn btn-primary" type="submit" style="margin-top:18px">Prepare WhatsApp message</button>
-            <p class="form-note">Do not include passwords, payment PINs, home addresses or other sensitive information.</p>
-            <p id="formMessage" class="form-note" role="status" aria-live="polite"></p>
+        <div class="contact-box">
+          <h3>Prepare your request</h3>
+          <form id="requestForm">
+            <div><label for="customerName">Your name</label><input id="customerName" name="customerName" placeholder="Enter your name" required></div>
+            <div><label for="service">Service needed</label><select id="service" name="service" required><option value="">Choose a service</option><option>Graphic Design</option><option>Website Creation</option><option>Typing Services</option></select></div>
+            <div><label for="details">Describe what you need</label><textarea id="details" name="details" placeholder="Include details such as size, content or deadline..." required></textarea></div>
+            <button class="btn whatsapp" type="submit">Send request on WhatsApp</button>
           </form>
+          <p class="notice">This form opens WhatsApp with your message. It does not store or submit your details to this website.</p>
         </div>
       </div>
-    </section>
-
-    <section id="faq">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="kicker">Questions</div>
-          <h2>Frequently asked questions</h2>
-        </div>
-        <div class="faq">
-          <details><summary>How much do services cost?</summary><p>Prices depend on the work involved. You will receive a quote and agree to it before work starts.</p></details>
-          <details><summary>How long will my project take?</summary><p>Timing depends on the project and current availability. A delivery date will be agreed before starting.</p></details>
-          <details><summary>Can I request changes?</summary><p>Yes. The number and type of revisions should be agreed when the project is quoted.</p></details>
-          <details><summary>Do you work with every request?</summary><p>Not necessarily. Each request is reviewed first to confirm that it is suitable and can be completed responsibly.</p></details>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap footer-row">
-      <div><strong>ELIMU DIGITAL SERVICES</strong><p>Digital help made simple.</p></div>
-      <p>© <span id="year"></span> ELIMU DIGITAL SERVICES. All rights reserved.</p>
     </div>
-  </footer>
+  </section>
+</main>
 
-  <script>
-    // IMPORTANT: Replace this example with a business contact number approved by a parent/guardian.
-    // Use country code 254 for Kenya, without +, spaces or leading 0. Example format: 2547XXXXXXXX
-    const BUSINESS_WHATSAPP_NUMBER = "254700000000";
+<footer>
+  <div class="wrap">
+    <strong>ELIMU DIGITAL SERVICES</strong>
+    <div class="footer-links"><a href="#services">Services</a><a href="#samples">Samples</a><a href="#contact">Contact</a></div>
+    <div>© <span id="year"></span> Elimu Digital Services. All rights reserved.</div>
+    <div>Created with care by Elimu Digital Services.</div>
+  </div>
+</footer>
+<a class="top" href="#home" aria-label="Back to top">↑</a>
 
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    document.getElementById("quoteForm").addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      const name = document.getElementById("customerName").value.trim();
-      const service = document.getElementById("service").value;
-      const details = document.getElementById("details").value.trim();
-      const deadline = document.getElementById("deadline").value.trim();
-      const status = document.getElementById("formMessage");
-
-      if (!name || !service || !details) {
-        status.textContent = "Please complete your name, service and project description.";
-        return;
-      }
-
-      if (BUSINESS_WHATSAPP_NUMBER === "254700000000") {
-        status.textContent = "The website is ready. Before receiving messages, the site owner must replace the example WhatsApp number in the code with an approved business contact number.";
-        return;
-      }
-
-      const message =
-        "Hello ELIMU DIGITAL SERVICES. I would like to request a quote." +
-        "\nName: " + name +
-        "\nService: " + service +
-        "\nProject: " + details +
-        (deadline ? "\nNeeded by: " + deadline : "");
-
-      const url = "https://wa.me/" + BUSINESS_WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
-      window.open(url, "_blank", "noopener,noreferrer");
-      status.textContent = "Your message is ready to send in WhatsApp.";
-    });
-  </script>
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+  });
+  navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }));
+  document.querySelectorAll('[data-service]').forEach(link => link.addEventListener('click', () => {
+    document.getElementById('service').value = link.dataset.service;
+  }));
+  document.getElementById('requestForm').addEventListener('submit', event => {
+    event.preventDefault();
+    const name = document.getElementById('customerName').value.trim();
+    const service = document.getElementById('service').value;
+    const details = document.getElementById('details').value.trim();
+    const message = `Hello Elimu Digital Services. My name is ${name}. I need: ${service}. Details: ${details}`;
+    const url = 'https://wa.me/254728462920?text=' + encodeURIComponent(message);
+    window.open(url, '_blank', 'noopener');
+  });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
